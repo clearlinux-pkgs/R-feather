@@ -4,7 +4,7 @@
 #
 Name     : R-feather
 Version  : 0.3.2
-Release  : 5
+Release  : 6
 URL      : https://cran.r-project.org/src/contrib/feather_0.3.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/feather_0.3.2.tar.gz
 Summary  : R Bindings to the Feather 'API'
