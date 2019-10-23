@@ -4,7 +4,7 @@
 #
 Name     : R-feather
 Version  : 0.3.5
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/feather_0.3.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/feather_0.3.5.tar.gz
 Summary  : R Bindings to the Feather 'API'
@@ -19,6 +19,7 @@ BuildRequires : R-hms
 BuildRequires : R-tibble
 BuildRequires : buildreq-R
 BuildRequires : buildreq-cmake
+BuildRequires : util-linux
 
 %description
 ## Feather for R
@@ -40,10 +41,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568909829
+export SOURCE_DATE_EPOCH=1571828639
 
 %install
-export SOURCE_DATE_EPOCH=1568909829
+export SOURCE_DATE_EPOCH=1571828639
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
