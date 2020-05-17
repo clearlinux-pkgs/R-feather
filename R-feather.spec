@@ -4,7 +4,7 @@
 #
 Name     : R-feather
 Version  : 0.3.5
-Release  : 20
+Release  : 21
 URL      : https://cran.r-project.org/src/contrib/feather_0.3.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/feather_0.3.5.tar.gz
 Summary  : R Bindings to the Feather 'API'
@@ -19,11 +19,9 @@ BuildRequires : R-hms
 BuildRequires : R-tibble
 BuildRequires : buildreq-R
 BuildRequires : buildreq-cmake
-BuildRequires : util-linux
 
 %description
-## Feather for R
-[![Build Status](https://travis-ci.org/wesm/feather.svg?branch=master)](https://travis-ci.org/wesm/feather)
+data store designed for maximum speed.
 
 %package lib
 Summary: lib components for the R-feather package.
@@ -35,21 +33,22 @@ lib components for the R-feather package.
 
 %prep
 %setup -q -c -n feather
+cd %{_builddir}/feather
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571828639
+export SOURCE_DATE_EPOCH=1589758248
 
 %install
-export SOURCE_DATE_EPOCH=1571828639
+export SOURCE_DATE_EPOCH=1589758248
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
